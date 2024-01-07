@@ -3,7 +3,9 @@
 int size = int.Parse(Console.ReadLine());
 Board board = new Board(size);
 
-
-Console.Clear();
-board.DrawBoard();
-  
+while (true)
+{
+    Console.Clear();
+    board.DrawBoard();
+    Logic.ButtonAction(Console.ReadKey().Key, board.Buttons);
+}
