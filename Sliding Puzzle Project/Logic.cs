@@ -29,6 +29,69 @@ static class Logic
                 if (buttons.SelectedButtonColumn + 1 < buttons.Size)
                     buttons.SelectedButtonColumn++;
                 break;
+            
+            case ConsoleKey.F:
+            case ConsoleKey.Enter:
+                ButtonsRearrange(buttons);
+                break;
+
+        }
+    }
+    
+    public static bool CheckOrder(Buttons buttons)
+    {
+        int previousValue, currentValue;
+        previousValue = -1;
+        bool isCorrectOrder = true;
+        for (int i = 0; i < buttons.Size; i++)
+        {
+            for (int j = 0; j < buttons.Size; j++)
+            {
+                currentValue = buttons.ButtonsValue[i, j];
+                if (j == i && j == buttons.Size - 1 && currentValue == 0)
+                    continue;
+
+                if (previousValue > currentValue || currentValue == 0)
+                {
+                    isCorrectOrder = false;
+                    break;
+                }
+
+                previousValue = currentValue;
+            }
+
+            if (!isCorrectOrder)
+                break;
+        }
+
+        return isCorrectOrder;
+    }
+    
+    private static void ButtonsRearrange(Buttons buttons)
+    {
+        //additional variables x and y so that the code is not stretched and is more readable
+        int x = buttons.SelectedButtonColumn;
+        int y = buttons.SelectedButtonRow;
+        
+        if ((x - 1 >= 0) && (buttons.ButtonsValue[y, x - 1] == 0))
+        {
+            buttons.ButtonsValue[y, x - 1] = buttons.ButtonsValue[y, x];
+            buttons.ButtonsValue[y, x] = 0;
+        }
+        else if ((x + 1 < buttons.Size) && (buttons.ButtonsValue[y, x + 1] == 0))
+        {
+            buttons.ButtonsValue[y, x + 1] = buttons.ButtonsValue[y, x];
+            buttons.ButtonsValue[y, x] = 0;
+        }
+        else if ((y - 1 >= 0) && (buttons.ButtonsValue[y - 1, x] == 0))
+        {
+            buttons.ButtonsValue[y - 1, x] = buttons.ButtonsValue[y, x];
+            buttons.ButtonsValue[y, x] = 0;
+        }
+        else if ((y + 1 < buttons.Size) && (buttons.ButtonsValue[y + 1, x] == 0))
+        {
+            buttons.ButtonsValue[y + 1, x] = buttons.ButtonsValue[y, x];
+            buttons.ButtonsValue[y, x] = 0;
         }
     }
 
