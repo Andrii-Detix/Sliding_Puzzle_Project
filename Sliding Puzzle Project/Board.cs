@@ -2,24 +2,28 @@
 
 public class Board
 {
-    public Board(int size)
+   public Board(int size)
     {
+        Buttons = new Buttons(size);
         Size = size;
     }
+
+    public Buttons Buttons;
     
     private readonly int Size;
     private const int ButtonHeight = 3;
     private const int ButtonWidth = 5;
-
+    
     public void DrawBoard()
     {
         DrawContours();
+        DrawNumbers();
     }
-
-    private void DrawContours()
-    {
-        int rowLimit = Size*ButtonHeight+Size;
-        int columnLimit = Size*ButtonWidth+Size;
+    
+   private void DrawContours()
+   {
+       int rowLimit = Size*ButtonHeight+Size;
+       int columnLimit = Size*ButtonWidth+Size;
         for (int i = 0; i <= rowLimit; i++)
         {
             if (i % (ButtonHeight+1) == 0)
@@ -44,5 +48,25 @@ public class Board
             Console.WriteLine();
         }
     }
-
+   
+    private void DrawNumbers()
+    {
+        int currentLeft, currentTop;
+        for (int i = 0; i < Size; i++)
+        {
+            
+            currentTop = i*(ButtonHeight+1) + ButtonHeight / 2 + 1;
+            
+            for (int j = 0; j < Size; j++)
+            {
+                currentLeft = j*(ButtonWidth+1) + ButtonWidth / 2 + 1;
+                
+                if (Buttons.ButtonsValue[i, j] == 0) continue;
+                Console.SetCursorPosition(currentLeft, currentTop);
+                Console.Write(Buttons.ButtonsValue[i,j]);
+            }
+        }
+    }
+    
+    
 }
