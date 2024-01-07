@@ -29,6 +29,40 @@ static class Logic
                 if (buttons.SelectedButtonColumn + 1 < buttons.Size)
                     buttons.SelectedButtonColumn++;
                 break;
+            
+            case ConsoleKey.F:
+            case ConsoleKey.Enter:
+                ButtonsRearrange(buttons);
+                break;
+
+        }
+    }
+    
+    private static void ButtonsRearrange(Buttons buttons)
+    {
+        //additional variables x and y so that the code is not stretched and is more readable
+        int x = buttons.SelectedButtonColumn;
+        int y = buttons.SelectedButtonRow;
+        
+        if ((x - 1 >= 0) && (buttons.ButtonsValue[y, x - 1] == 0))
+        {
+            buttons.ButtonsValue[y, x - 1] = buttons.ButtonsValue[y, x];
+            buttons.ButtonsValue[y, x] = 0;
+        }
+        else if ((x + 1 < buttons.Size) && (buttons.ButtonsValue[y, x + 1] == 0))
+        {
+            buttons.ButtonsValue[y, x + 1] = buttons.ButtonsValue[y, x];
+            buttons.ButtonsValue[y, x] = 0;
+        }
+        else if ((y - 1 >= 0) && (buttons.ButtonsValue[y - 1, x] == 0))
+        {
+            buttons.ButtonsValue[y - 1, x] = buttons.ButtonsValue[y, x];
+            buttons.ButtonsValue[y, x] = 0;
+        }
+        else if ((y + 1 < buttons.Size) && (buttons.ButtonsValue[y + 1, x] == 0))
+        {
+            buttons.ButtonsValue[y + 1, x] = buttons.ButtonsValue[y, x];
+            buttons.ButtonsValue[y, x] = 0;
         }
     }
 
