@@ -1,6 +1,6 @@
 ﻿using Sliding_Puzzle_Project;
 
-int size = int.Parse(Console.ReadLine());
+int size = Logic.SelectBoardSize();
 Board board = new Board(size);
 
 while (!Logic.CheckOrder(board.Buttons))
