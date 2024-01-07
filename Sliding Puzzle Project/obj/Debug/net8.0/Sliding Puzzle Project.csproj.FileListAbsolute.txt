@@ -1,0 +1,15 @@
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\bin\Debug\net8.0\Sliding Puzzle Project.exe
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\bin\Debug\net8.0\Sliding Puzzle Project.deps.json
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\bin\Debug\net8.0\Sliding Puzzle Project.runtimeconfig.json
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\bin\Debug\net8.0\Sliding Puzzle Project.dll
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\bin\Debug\net8.0\Sliding Puzzle Project.pdb
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\Sliding Puzzle Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\Sliding Puzzle Project.AssemblyInfoInputs.cache
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\Sliding Puzzle Project.AssemblyInfo.cs
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\Sliding Puzzle Project.csproj.CoreCompileInputs.cache
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\Sliding Puzzle Project.sourcelink.json
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\Sliding Puzzle Project.dll
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\refint\Sliding Puzzle Project.dll
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\Sliding Puzzle Project.pdb
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\Sliding Puzzle Project.genruntimeconfig.cache
+D:\Університет\основи програмування\екзамен\Sliding Puzzle Project\Sliding Puzzle Project\obj\Debug\net8.0\ref\Sliding Puzzle Project.dll
