@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sliding Puzzle Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ecf4c54a685824d40f65f14e18c80c935bc56dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sliding Puzzle Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sliding Puzzle Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
