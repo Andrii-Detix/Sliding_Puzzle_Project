@@ -67,6 +67,25 @@ static class Logic
         return isCorrectOrder;
     }
     
+    public static int SelectBoardSize()
+    {
+        int size;
+        do
+        {
+            Console.Clear();
+            Console.Write("""
+                          Select the board size:
+                          4*4 (Write 4)
+                          5*5 (Write 5)
+                          Size:
+                          """);
+            size = int.Parse(Console.ReadLine());
+        } while (size != 4 && size != 5);
+
+        return size;
+
+    }
+
     private static void ButtonsRearrange(Buttons buttons)
     {
         //additional variables x and y so that the code is not stretched and is more readable
