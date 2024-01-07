@@ -17,6 +17,7 @@ public class Board
     public void DrawBoard()
     {
         DrawContours();
+        DrawSelectedButton();
         DrawNumbers();
     }
     
@@ -48,6 +49,28 @@ public class Board
             Console.WriteLine();
         }
     }
+   
+   private void DrawSelectedButton()
+   {
+       int currentLeft = Buttons.SelectedButtonColumn * ButtonWidth + Buttons.SelectedButtonColumn+1;
+       int currentTop = Buttons.SelectedButtonRow * ButtonHeight + Buttons.SelectedButtonRow+1;
+       
+        
+       Console.ForegroundColor = ConsoleColor.Red;
+       for (int i = 0; i < ButtonHeight; i++)
+       {
+           for (int j = 0; j < ButtonWidth; j++)
+           {
+               Console.SetCursorPosition(currentLeft,currentTop);
+               Console.Write("#");
+               currentLeft++;
+           }
+
+           currentLeft -= ButtonWidth;
+           currentTop++;
+       }
+       Console.ResetColor();
+   }
    
     private void DrawNumbers()
     {
