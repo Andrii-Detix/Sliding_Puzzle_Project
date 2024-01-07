@@ -3,9 +3,13 @@
 int size = int.Parse(Console.ReadLine());
 Board board = new Board(size);
 
-while (true)
+while (!Logic.CheckOrder(board.Buttons))
 {
     Console.Clear();
     board.DrawBoard();
     Logic.ButtonAction(Console.ReadKey().Key, board.Buttons);
 }
+
+Console.Clear();
+Console.WriteLine("Congratulations! You are winner!");
+Console.ReadKey();
