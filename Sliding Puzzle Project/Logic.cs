@@ -2,7 +2,7 @@
 
 static class Logic
 {
-    public static void ButtonAction(ConsoleKey key, Buttons buttons)
+    public static void ButtonAction(ConsoleKey key, ref Buttons buttons)
     {
         switch (key)
         {
@@ -32,13 +32,13 @@ static class Logic
             
             case ConsoleKey.F:
             case ConsoleKey.Enter:
-                ButtonsRearrange(buttons);
+                ButtonsRearrange(ref buttons);
                 break;
 
         }
     }
     
-    public static bool CheckOrder(Buttons buttons)
+    public static bool CheckOrder(ref Buttons buttons)
     {
         int previousValue, currentValue;
         previousValue = -1;
@@ -86,7 +86,7 @@ static class Logic
 
     }
 
-    private static void ButtonsRearrange(Buttons buttons)
+    private static void ButtonsRearrange(ref Buttons buttons)
     {
         //additional variables x and y so that the code is not stretched and is more readable
         int x = buttons.SelectedButtonColumn;
