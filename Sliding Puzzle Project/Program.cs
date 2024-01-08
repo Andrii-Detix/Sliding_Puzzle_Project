@@ -3,11 +3,11 @@
 int size = Logic.SelectBoardSize();
 Board board = new Board(size);
 
-while (!Logic.CheckOrder(board.Buttons))
+while (!Logic.CheckOrder(ref board.Buttons))
 {
     Console.Clear();
     board.DrawBoard();
-    Logic.ButtonAction(Console.ReadKey().Key, board.Buttons);
+    Logic.ButtonAction(Console.ReadKey().Key, ref board.Buttons);
 }
 
 Console.Clear();
