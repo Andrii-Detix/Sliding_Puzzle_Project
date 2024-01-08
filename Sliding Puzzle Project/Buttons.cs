@@ -1,6 +1,6 @@
 ﻿namespace Sliding_Puzzle_Project;
 
-public class Buttons
+public struct Buttons
 {
   
     public Buttons(int size)
