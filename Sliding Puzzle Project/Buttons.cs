@@ -1,6 +1,6 @@
 ﻿namespace Sliding_Puzzle_Project;
 
-public class Buttons
+public struct Buttons
 {
   
     public Buttons(int size)
@@ -10,9 +10,10 @@ public class Buttons
     }
 
     public readonly int Size;
-    public int[,] ButtonsValue;
-    public int SelectedButtonColumn = 0;
-    public int SelectedButtonRow = 0;
+    
+    public int[,] ButtonsValue { get; private set; }
+    public int SelectedButtonColumn { get; set; } = 0;
+    public int SelectedButtonRow { get; set; }= 0;
     
     private void CreateButtons()
     {
